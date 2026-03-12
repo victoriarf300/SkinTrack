@@ -1,41 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SkinTrack</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="hero">
-      <h1>SkinTrack</h1>
-      <p class="tagline">Your personal skincare routine tracker</p>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <title>SkinTrack</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-    <main class="content">
-      <section class="description">
-        <h2>About the App</h2>
-        <p>
-          SkinTrack helps you monitor your daily skincare regimen, set
-          reminders, and log progress over time. Keep your skin care organized
-          and consistent.
-        </p>
-      </section>
+<body>
 
-      <section class="features">
-        <h2>Planned Features</h2>
-        <ul>
-          <li>Daily routine logging</li>
-          <li>Product library with details</li>
-          <li>Reminder notifications</li>
-          <li>Progress charts and notes</li>
-          <li>Customizable routines</li>
-        </ul>
-      </section>
-    </main>
+  <h1>SkinTrack</h1>
+  <p class="tagline">Track your skincare routines</p>
 
-    <footer>
-      <p>&copy; 2026 SkinTrack</p>
-    </footer>
-  </body>
+  <div class="form">
+    <input id="stepInput" placeholder="Add skincare step">
+
+    <select id="routineSelect">
+      <option value="morning">Morning</option>
+      <option value="night">Night</option>
+    </select>
+
+    <button onclick="addStep()">Add Step</button>
+  </div>
+
+  <div class="routines">
+
+    <div class="routine">
+      <h2>Morning Routine</h2>
+      <ul id="morningList"></ul>
+    </div>
+
+    <div class="routine">
+      <h2>Night Routine</h2>
+      <ul id="nightList"></ul>
+    </div>
+
+  </div>
+
+<script src="script.js"></script>
+
+</body>
 </html>
