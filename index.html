@@ -1,42 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>SkinTrack</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-
 <body>
+  <div class="container">
+    <h1>SkinTrack</h1>
+    <p class="tagline">Track your skincare routines</p>
 
-  <h1>SkinTrack</h1>
-  <p class="tagline">Track your skincare routines</p>
+    <div class="form">
+      <input id="stepInput" placeholder="Add skincare step">
 
-  <div class="form">
-    <input id="stepInput" placeholder="Add skincare step">
+      <select id="routineSelect">
+        <option value="morning">Morning</option>
+        <option value="night">Night</option>
+      </select>
 
-    <select id="routineSelect">
-      <option value="morning">Morning</option>
-      <option value="night">Night</option>
-    </select>
-
-    <button onclick="addStep()">Add Step</button>
-  </div>
-
-  <div class="routines">
-
-    <div class="routine">
-      <h2>Morning Routine</h2>
-      <ul id="morningList"></ul>
+      <button onclick="addStep()">Add Step</button>
     </div>
 
-    <div class="routine">
-      <h2>Night Routine</h2>
-      <ul id="nightList"></ul>
-    </div>
+    <div class="routines">
+      <div class="routine">
+        <h2>Morning Routine</h2>
+        <ul id="morningList"></ul>
+      </div>
 
+      <div class="routine">
+        <h2>Night Routine</h2>
+        <ul id="nightList"></ul>
+      </div>
+    </div>
   </div>
 
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
-</html>
