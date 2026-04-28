@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkinTrack</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>SkinTrack</h1>
+      <p class="tagline">Track your skincare routines</p>
+
+      <section id="auth-section" class="auth-section">
+        <div class="auth-cards">
+          <div class="auth-card">
+            <h2>Create Account</h2>
+            <form id="signup-form" class="auth-form">
+              <input
+                id="signup-email"
+                type="email"
+                placeholder="Email"
+                required
+              />
+              <input
+                id="signup-password"
+                type="password"
+                placeholder="Password"
+                required
+              />
+              <button type="submit">Sign Up</button>
+            </form>
+          </div>
+
+          <div class="auth-card">
+            <h2>Log In</h2>
+            <form id="login-form" class="auth-form">
+              <input
+                id="login-email"
+                type="email"
+                placeholder="Email"
+                required
+              />
+              <input
+                id="login-password"
+                type="password"
+                placeholder="Password"
+                required
+              />
+              <button type="submit">Log In</button>
+            </form>
+          </div>
+        </div>
+
+        <p id="auth-message" class="auth-message"></p>
+      </section>
+
+      <section id="app-section" class="hidden">
+        <div class="user-bar">
+          <p id="user-email"></p>
+
+          <div>
+            <button id="dark-mode-toggle">🌙</button>
+            <button id="logout-btn">Logout</button>
+          </div>
+        </div>
+
+        <div class="form">
+          <input id="stepInput" type="text" placeholder="Add skincare step" />
+
+          <select id="routineSelect">
+            <option value="morning">Morning</option>
+            <option value="night">Night</option>
+          </select>
+
+          <button onclick="addStep()">Add Step</button>
+        </div>
+
+        <div class="routines">
+          <div class="routine morning">
+            <h2>Morning Routine</h2>
+            <ul id="morningList"></ul>
+          </div>
+
+          <div class="routine night">
+            <h2>Night Routine</h2>
+            <ul id="nightList"></ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
